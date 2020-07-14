@@ -397,6 +397,7 @@ class Flux_PaymentNotifyRequest {
 		$request  = "POST /cgi-bin/webscr HTTP/1.1\r\n";
 		$request .= "Content-Type: application/x-www-form-urlencoded\r\n";
 		$request .= 'Content-Length: '.strlen($qString)."\r\n";
+		$request .= "User-Agent: Iridium\r\n"; // this line, with any name i guess.
 		$request .= 'Host: '.$this->ppServer."\r\n";
 		$request .= "Connection: close\r\n\r\n";
 		$request .= $qString;
